@@ -1,19 +1,18 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Slogan from "./components/slogan/Slogan";
 import CardModal from "./components/modal/Modal";
 import DisplayCards from "./components/card/DisplayCards";
+import { API_URL } from "./constants";
 
 function App() {
   const [cars, setCars] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState();
 
-  console.log(cars);
-
   const getCarsFromApi = () => {
-    fetch("https://64464e200431e885f00e57f0.mockapi.io/cars")
+    fetch(API_URL)
       .then((res) => {
         if (!res.ok) throw new Error("error fetching data");
         return res.json();
@@ -24,7 +23,7 @@ function App() {
   useEffect(() => getCarsFromApi(), []);
 
   return (
-    <>
+    <Fragment>
       <Navbar />
       <Slogan />
       <main className="app-container">
@@ -44,7 +43,7 @@ function App() {
         setModalIsOpen={setModalIsOpen}
         modalInfo={modalInfo}
       />
-    </>
+    </Fragment>
   );
 }
 
