@@ -7,20 +7,10 @@ import getDateDifference from "../../utils/getDateDifference";
 import CardFooter from "./CardFooter";
 import formatNumbersDot from "../../utils/formatNumbersDot";
 
-export default function Card({
-  carInfo,
-  changeFavCondition,
-  setModalIsOpen,
-  setModalInfo,
-}) {
-  const openModal = (carInfo) => {
-    setModalIsOpen(true);
-    setModalInfo(carInfo);
-  };
-
+export default function Card({ carInfo, changeFavCondition, onClickCard }) {
   return (
     <>
-      <div className="card" onClick={() => openModal(carInfo)}>
+      <div className="card" onClick={() => onClickCard(carInfo)}>
         <section className="card__image__container">
           <img
             className="card__image__container--image"

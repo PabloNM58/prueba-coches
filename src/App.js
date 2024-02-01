@@ -2,7 +2,7 @@ import "./App.css";
 import { Fragment, useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Slogan from "./components/slogan/Slogan";
-import CardModal from "./components/modal/Modal";
+import CardModal from "./components/modal/CardModal";
 import DisplayCards from "./components/card/DisplayCards";
 import { API_URL } from "./constants";
 
@@ -10,6 +10,17 @@ function App() {
   const [cars, setCars] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState();
+
+  const onClickCard = (carInfo) => {
+    setModalIsOpen(true);
+    setModalInfo(carInfo);
+  };
+
+  const closeModal = () => {
+    setModalInfo();
+    setModalIsOpen(false);
+  };
+
   const getCarsFromApi = () => {
     fetch(API_URL)
       .then((res) => {
@@ -30,8 +41,7 @@ function App() {
           <DisplayCards
             cars={cars}
             setCars={setCars}
-            setModalIsOpen={setModalIsOpen}
-            setModalInfo={setModalInfo}
+            onClickCard={onClickCard}
           />
         ) : (
           <h1>Cargando datos...</h1>
@@ -39,7 +49,7 @@ function App() {
       </main>
       <CardModal
         modalIsOpen={modalIsOpen}
-        setModalIsOpen={setModalIsOpen}
+        closeModal={closeModal}
         modalInfo={modalInfo}
       />
     </Fragment>

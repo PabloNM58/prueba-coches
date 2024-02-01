@@ -2,12 +2,7 @@ import "./card.css";
 import Card from "./Card";
 import { Fragment } from "react";
 
-export default function DisplayCards({
-  cars,
-  setCars,
-  setModalIsOpen,
-  setModalInfo,
-}) {
+export default function DisplayCards({ cars, setCars, onClickCard }) {
   const changeFavCondition = (e, carId) => {
     e.stopPropagation();
     setCars((prevState) =>
@@ -27,8 +22,7 @@ export default function DisplayCards({
             carInfo={car}
             key={car.id}
             changeFavCondition={changeFavCondition}
-            setModalIsOpen={setModalIsOpen}
-            setModalInfo={setModalInfo}
+            onClickCard={onClickCard}
           />
         ))}
       </div>

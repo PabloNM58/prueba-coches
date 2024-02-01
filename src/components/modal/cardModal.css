@@ -5,6 +5,7 @@
   margin: auto;
   padding: 0;
   width: 30%;
+  border-style: hidden;
   opacity: 0;
   transform: translate(-50%, -50%);
   -webkit-transition: all 0.2s ease-in-out;
@@ -23,6 +24,9 @@
   }
   @media screen and (max-width: 568px) {
     width: 90%;
+  }
+  &:focus {
+    outline: 0;
   }
 }
 

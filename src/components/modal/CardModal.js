@@ -1,17 +1,14 @@
-import "./modal.css";
+import "./cardModal.css";
 import Modal from "react-modal";
 import { IoMdClose } from "react-icons/io";
 import formatNumbersDot from "../../utils/formatNumbersDot";
 
-export default function CardModal({ modalIsOpen, setModalIsOpen, modalInfo }) {
-  function closeModal() {
-    setModalIsOpen(false);
-  }
+export default function CardModal({ modalIsOpen, closeModal, modalInfo }) {
   return (
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      contentLabel="Modal"
+      ariaHideApp={false}
       className={{
         base: "modal-base",
         afterOpen: "modal-base__after__open",

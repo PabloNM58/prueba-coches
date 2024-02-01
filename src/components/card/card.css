@@ -4,10 +4,9 @@
   border-radius: 10px;
   box-shadow: 0px 3px #eeeeee;
   cursor: pointer;
-}
-
-.card:hover {
-  transform: scale(1.02);
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .card__image__container {
