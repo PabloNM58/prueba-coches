@@ -21,8 +21,13 @@ export default function Card({
   return (
     <>
       <div className="card" onClick={() => openModal(carInfo)}>
-        <section className="image-container">
-          <p className="time-overlay-text">
+        <section className="card__image__container">
+          <img
+            className="card__image__container--image"
+            src={carInfo.defaultphoto}
+            alt={carInfo.make}
+          />
+          <p className="card__image__container--time--overlay--text">
             {getDateDifference(
               carInfo.lastedited.year,
               carInfo.lastedited.month,
@@ -32,22 +37,17 @@ export default function Card({
               carInfo.lastedited.second
             )}
           </p>
-          <p className="num-photos-overlay-text">
+          <p className="card__image__container--num--photos--overlay--text">
             {carInfo.numberofphotos} <MdInsertPhoto />
           </p>
-          <img
-            className="image"
-            src={carInfo.defaultphoto}
-            alt={carInfo.make}
-          />
         </section>
-        <section className="info-car-container">
-          <div className="price-container">
-            <p className="price-typography">
+        <section className="car__info__car__container">
+          <div className="car__info__car__container--price--container">
+            <p className="car__info__car__container--price--typography">
               {formatNumbersDot(carInfo.price)} €
             </p>
             <div
-              className="fab-icon-container"
+              className="car__info__car__container--fab--icon"
               onClick={(e) => changeFavCondition(e, carInfo.id)}
             >
               {carInfo.favorite ? (
@@ -57,16 +57,21 @@ export default function Card({
               )}
             </div>
           </div>
-          <p className="car-model-typography">
+          <p className="car__info__car__container--car--model">
             {carInfo.make} {carInfo.model}
           </p>
-          <div className="car-version-container">
-            <p className="car-version-typography" title={carInfo.version}>
+          <div className="car__info__car__container--car--version--container">
+            <p
+              className="car__info__car__container--car--version"
+              title={carInfo.version}
+            >
               {carInfo.version}
             </p>
-            <div className="info-fuel-container">
+            <div className="car__info__car__container--fuel--container">
               <CarFuelIcon fuel={carInfo.fuel} />
-              <p className="car-fuel-typography">{carInfo.fuel}</p>
+              <p className="car__info__car__container--car--fuel">
+                {carInfo.fuel}
+              </p>
             </div>
           </div>
           <CardFooter carInfo={carInfo} />

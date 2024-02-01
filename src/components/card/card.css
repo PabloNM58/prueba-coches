@@ -10,17 +10,18 @@
   transform: scale(1.02);
 }
 
-.image-container {
+.card__image__container {
   position: relative;
   display: inline-block;
-  & .image {
-    display: block;
-    width: 100%;
-    border-radius: 10px 10px 0px 0px;
-  }
 }
 
-.time-overlay-text {
+.card__image__container--image {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card__image__container--time--overlay--text {
   position: absolute;
   top: 1%;
   right: 4%;
@@ -34,7 +35,7 @@
   border-radius: 3px;
 }
 
-.num-photos-overlay-text {
+.card__image__container--num--photos--overlay--text {
   position: absolute;
   top: 1%;
   right: 0%;
@@ -50,59 +51,59 @@
   align-items: center;
 }
 
-.info-car-container {
+.car__info__car__container {
   padding: 10px;
-
-  & .price-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  & .price-typography {
-    font-family: DMSans-Bold;
-    font-size: 25px;
-    margin: 0;
-  }
-
-  & .fab-icon-container {
-    display: flex;
-    align-items: center;
-  }
 }
 
-.car-model-typography {
+.car__info__car__container--price--container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car__info__car__container--price--typography {
+  font-family: DMSans-Bold;
+  font-size: 25px;
+  margin: 0;
+}
+
+.car__info__car__container--fab--icon {
+  display: flex;
+  align-items: center;
+}
+
+.car__info__car__container--car--model {
   font-family: DMSans-Bold;
   font-size: 20px;
   margin: 0;
 }
 
-.car-version-container {
+.car__info__car__container--car--version--container {
   display: grid;
   grid-template-columns: 60% 1fr;
   align-items: end;
+}
 
-  & .car-version-typography {
-    font-family: DMSans-Bold;
-    font-size: 16px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin: 0;
-  }
+.car__info__car__container--car--version {
+  font-family: DMSans-Bold;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+}
 
-  & .info-fuel-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
+.car__info__car__container--car--fuel {
+  font-family: DMSans-Bold;
+  font-size: 16px;
+  color: #bdbdbd;
+  margin-left: 5px;
+  margin: 0;
+}
 
-  & .car-fuel-typography {
-    font-family: DMSans-Bold;
-    font-size: 16px;
-    color: #bdbdbd;
-    margin-left: 5px;
-    margin: 0;
-  }
+.car__info__car__container--fuel--container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .time-info {
@@ -115,30 +116,30 @@
 .card-footer {
   display: grid;
   grid-template-columns: 40% 20% 40%;
+}
 
-  & .car-location {
-    font-family: DMSans-Medium;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin-bottom: 0;
-  }
+.card-footer__car__location {
+  font-family: DMSans-Medium;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0;
+}
 
-  & .car-year {
-    font-family: DMSans-Medium;
-    display: flex;
-    justify-content: center;
-    border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
-    margin-bottom: 0;
-  }
+.card-footer__car__year {
+  font-family: DMSans-Medium;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  margin-bottom: 0;
+}
 
-  & .car-km {
-    font-family: DMSans-Medium;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 0;
-  }
+.card-footer__car__km {
+  font-family: DMSans-Medium;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
 }
 
 .cars-intro {
@@ -151,4 +152,10 @@
     max-width: 100%;
     font-size: 22px;
   }
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
 }

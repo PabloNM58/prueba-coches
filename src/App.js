@@ -10,7 +10,7 @@ function App() {
   const [cars, setCars] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState();
-
+  console.log(cars);
   const getCarsFromApi = () => {
     fetch(API_URL)
       .then((res) => {

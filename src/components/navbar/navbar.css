@@ -3,9 +3,10 @@
   top: 0;
   width: 100%;
   background-color: aliceblue;
+  z-index: 1;
 }
 
-.navbar-img {
+.navbar__img {
   height: 3vh;
   padding-top: 1vh;
   padding-bottom: 1vh;

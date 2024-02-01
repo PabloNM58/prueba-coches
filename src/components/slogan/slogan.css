@@ -4,15 +4,8 @@
   justify-content: flex-end;
   background-color: #326a79;
   height: 400px;
-  margin-top: 61px;
+  margin-top: 3vh;
 
-  & .slogan {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 4vw;
-    padding-left: 4vw;
-  }
   @media screen and (max-width: 1920px) {
     grid-template-columns: 20% 80%;
   }
@@ -30,43 +23,55 @@
   }
 }
 
-.title-container {
-  & .title {
-    font-family: DMSans-Bold;
-    font-size: 40px;
-    font-weight: 800;
-    color: #fff;
+.slogan-container__slogan {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 4vw;
+  padding-left: 4vw;
+}
 
-    @media screen and (max-width: 1024px) {
-      font-size: 30px;
-    }
-    @media screen and (max-width: 768px) {
-      font-size: 22px;
-    }
-  }
-
-  & .sub-title {
-    font-family: DMSans-Medium;
-    font-size: 25px;
-    font-weight: 400;
-    color: #fff;
-    margin-right: 10vw;
-
-    @media screen and (max-width: 1920px) {
-      margin-right: 0;
-    }
-    @media screen and (max-width: 1024px) {
-      margin-right: 0;
-      font-size: 20px;
-    }
-    @media screen and (max-width: 768px) {
-      margin-right: 0;
-      font-size: 16px;
-    }
+.slogan-container__empty {
+  @media screen and (max-width: 568px) {
+    display: none;
   }
 }
 
-.logo-image {
+.slogan-container__slogan--title {
+  font-family: DMSans-Bold;
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.slogan-container__slogan--subtitle {
+  font-family: DMSans-Medium;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 10vw;
+
+  @media screen and (max-width: 1920px) {
+    margin-right: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-right: 0;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    font-size: 16px;
+  }
+}
+
+.slogan-container__slogan--logo--image {
   @media screen and (max-width: 768px) {
     max-width: 20%;
     font-size: 22px;
@@ -74,11 +79,5 @@
   @media screen and (max-width: 568px) {
     max-width: 15%;
     font-size: 22px;
-  }
-}
-
-.empty-div {
-  @media screen and (max-width: 568px) {
-    display: none;
   }
 }

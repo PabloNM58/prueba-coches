@@ -16,9 +16,3 @@
   padding-right: 4vw;
   padding-left: 4vw;
 }
-
-.flex-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-}
