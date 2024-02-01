@@ -1,0 +1,13 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.navbar-img {
+  height: 3vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin-left: 4vw;
+}

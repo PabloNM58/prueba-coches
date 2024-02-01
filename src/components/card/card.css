@@ -1,0 +1,154 @@
+.card {
+  border: 1px solid rgb(243, 237, 237);
+  margin: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 3px #eeeeee;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  & .image {
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+
+.time-overlay-text {
+  position: absolute;
+  top: 1%;
+  right: 4%;
+  transform: translate(-50%, -50%);
+  background-color: #93989c;
+  color: #eeeeee;
+  padding: 1px 2px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.9;
+  border-radius: 3px;
+}
+
+.num-photos-overlay-text {
+  position: absolute;
+  top: 1%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  background-color: #93989c;
+  color: #eeeeee;
+  padding: 1px 2px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.9;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.info-car-container {
+  padding: 10px;
+
+  & .price-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .price-typography {
+    font-family: DMSans-Bold;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  & .fab-icon-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.car-model-typography {
+  font-family: DMSans-Bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.car-version-container {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  align-items: end;
+
+  & .car-version-typography {
+    font-family: DMSans-Bold;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  & .info-fuel-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  & .car-fuel-typography {
+    font-family: DMSans-Bold;
+    font-size: 16px;
+    color: #bdbdbd;
+    margin-left: 5px;
+    margin: 0;
+  }
+}
+
+.time-info {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: red;
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+
+  & .car-location {
+    font-family: DMSans-Medium;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  & .car-year {
+    font-family: DMSans-Medium;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin-bottom: 0;
+  }
+
+  & .car-km {
+    font-family: DMSans-Medium;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+
+.cars-intro {
+  font-family: DMSans-Regular;
+  font-size: 26px;
+  font-weight: 800;
+  border-bottom: 2px solid #fccdbf;
+  max-width: 50%;
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    font-size: 22px;
+  }
+}
