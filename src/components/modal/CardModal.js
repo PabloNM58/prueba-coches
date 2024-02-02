@@ -2,6 +2,7 @@ import "./cardModal.css";
 import Modal from "react-modal";
 import { IoMdClose } from "react-icons/io";
 import formatNumbersDot from "../../utils/formatNumbersDot";
+import Icon from "../icon/Icon";
 
 export default function CardModal({ modalIsOpen, closeModal, modalInfo }) {
   return (
@@ -22,9 +23,11 @@ export default function CardModal({ modalIsOpen, closeModal, modalInfo }) {
       shouldCloseOnOverlayClick={true}
     >
       <div className="close-button">
-        <IoMdClose
+        <Icon
+          name={IoMdClose}
+          fontSize="35px"
+          color="#424242"
           onClick={closeModal}
-          style={{ fontSize: "35px", color: "#424242" }}
         />
       </div>
       <section className="modal-interior">

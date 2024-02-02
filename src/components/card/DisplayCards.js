@@ -17,7 +17,7 @@ export default function DisplayCards({ cars, setCars, onClickCard }) {
     <Fragment>
       <p className="cars-intro">Coches que te pueden interesar</p>
       <div className="flex-container">
-        {cars.map((car) => (
+        {cars?.map((car) => (
           <Card
             carInfo={car}
             key={car.id}

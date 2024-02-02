@@ -3,7 +3,6 @@ import "./slogan.css";
 export default function Slogan() {
   return (
     <section className="slogan-container">
-      <div className="slogan-container__empty"></div>
       <div className="slogan-container__slogan">
         <div>
           <h1 className="slogan-container__slogan--title">

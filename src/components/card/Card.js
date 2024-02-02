@@ -6,11 +6,16 @@ import CarFuelIcon from "./CarFuelIcon";
 import getDateDifference from "../../utils/getDateDifference";
 import CardFooter from "./CardFooter";
 import formatNumbersDot from "../../utils/formatNumbersDot";
+import Icon from "../icon/Icon";
 
 export default function Card({ carInfo, changeFavCondition, onClickCard }) {
   return (
     <>
-      <div className="card" onClick={() => onClickCard(carInfo)}>
+      <div
+        data-testid="card-item"
+        className="card"
+        onClick={() => onClickCard(carInfo)}
+      >
         <section className="card__image__container">
           <img
             className="card__image__container--image"
@@ -41,9 +46,9 @@ export default function Card({ carInfo, changeFavCondition, onClickCard }) {
               onClick={(e) => changeFavCondition(e, carInfo.id)}
             >
               {carInfo.favorite ? (
-                <FaHeart style={{ color: "#b71c1c", fontSize: "20px" }} />
+                <Icon name={FaHeart} fontSize="20px" color="#b71c1c" />
               ) : (
-                <FaRegHeart style={{ color: "#bdbdbd", fontSize: "20px" }} />
+                <Icon name={FaRegHeart} fontSize="20px" color="#bdbdbd" />
               )}
             </div>
           </div>

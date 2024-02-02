@@ -142,6 +142,7 @@
 }
 
 .cars-intro {
+  margin-top: 4vh;
   font-family: DMSans-Regular;
   font-size: 26px;
   font-weight: 800;
@@ -157,4 +158,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
+}
+
+.car-fuel-icon {
+  margin-right: 5px;
 }
