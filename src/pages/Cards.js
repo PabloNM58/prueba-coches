@@ -27,7 +27,7 @@ export default function Cards() {
     <Fragment>
       <main className="app-container">
         {loading ? (
-          <Loader />
+          <Loader loaderInfo={"Cargando datos..."} />
         ) : (
           <DisplayCards
             cars={cars}
